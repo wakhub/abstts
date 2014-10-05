@@ -2,13 +2,13 @@
 Abstract Text-to-Speech
 ========================
 
-.. image:: https://raw.githubusercontent.com/wakhub/monodict/master/app/src/main/res/drawable-xxxhdpi/ic_launcher.png
+.. image:: https://raw.githubusercontent.com/wakhub/abstts/master/app/src/main/res/drawable-xxxhdpi/ic_launcher.png
 
 **Abstract Text-to-Speech** is a Text-to-Speech (TTS) engine which can merge multiple Text-to-Speech.
 
 Features
 
-- Auto language detection (e.g. こんにちは => Use Japanese TTS, สวัสดี => Thai TTS)
+- Auto language detection (e.g. こんにちは => Use Japanese TTS, สวัสดี => Use Thai TTS)
 - Switch Text-to-Speech engine according to language
 - Setting default volume, speech rate, pitch and pan for each languages
 
