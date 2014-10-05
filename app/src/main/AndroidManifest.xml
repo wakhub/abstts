@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.wakhub.abstts">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.DeviceDefault">
+        <activity
+            android:name="com.github.wakhub.abstts.activity.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.wakhub.abstts.activity.StartTtsEngine"
+            android:hasCode="false"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.START_TTS_ENGINE" />
+
+                <category android:name="android.intent.category.tts_engine.ABSTTS" />
+                <category android:name="android.intent.category.tts_lang.eng" />
+                <category android:name="android.intent.category.tts_lang.eng.USA" />
+                <category android:name="android.intent.category.tts_lang.eng.GBR" />
+                <category android:name="android.intent.category.tts_lang.fra" />
+                <category android:name="android.intent.category.tts_lang.deu" />
+                <category android:name="android.intent.category.tts_lang.rus" />
+                <category android:name="android.intent.category.tts_lang.ita" />
+                <category android:name="android.intent.category.tts_lang.spa" />
+                <category android:name="android.intent.category.tts_lang.jpa" />
+                <category android:name="android.intent.category.tts_lang.chi" />
+                <category android:name="android.intent.category.tts_lang.kor" />
+                <category android:name="android.intent.category.tts_lang.tha" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.wakhub.abstts.activity.SettingsActivity"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:label="@string/title_activity_settings">
+            <intent-filter>
+                <action android:name="android.speech.tts.engine.CONFIGURE_ENGINE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.wakhub.abstts.activity.CheckTtsData"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.speech.tts.engine.CHECK_TTS_DATA" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.wakhub.abstts.activity.GetSampleText"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.speech.tts.engine.GET_SAMPLE_TEXT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name=".SettingsProvider"
+            android:authorities=".providers.SettingsProvider" />
+        <service
+            android:name=".AbsttsTextToSpeechService"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.TTS_SERVICE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.speech.tts"
+                android:resource="@xml/tts_engine" />
+        </service>
+    </application>
+</manifest>

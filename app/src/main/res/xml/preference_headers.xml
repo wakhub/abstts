@@ -1,0 +1,45 @@
+<!--
+  ~ Copyright (C) 2014 wak
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the 'License');
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an 'AS IS' BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+ -->
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="com.github.wakhub.abstts.activity.SettingsActivity$GeneralSettingsFragment"
+        android:icon="@android:drawable/ic_lock_silent_mode_off"
+        android:summary="Language detection"
+        android:title="General" />
+
+    <header
+        android:fragment="com.github.wakhub.abstts.activity.SettingsActivity$LanguageSettingsFragment"
+        android:icon="@android:drawable/ic_menu_sort_alphabetically"
+        android:summary="Settings for each languages"
+        android:title="Language Settings" />
+
+    <header
+        android:icon="@android:drawable/ic_menu_more"
+        android:summary="Open Text-to-speech options in Android Settings"
+        android:title="Text-to-speech options">
+        <intent android:action="com.android.settings.TTS_SETTINGS" />
+    </header>
+
+    <header
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:summary="Abstract Text-to-speech app"
+        android:title="Open App">
+        <intent
+            android:targetClass="com.github.wakhub.abstts.activity.MainActivity"
+            android:targetPackage="com.github.wakhub.abstts" />
+    </header>
+</preference-headers>
