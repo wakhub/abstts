@@ -39,7 +39,6 @@
         </activity>
         <activity
             android:name="com.github.wakhub.abstts.activity.SettingsActivity"
-            android:icon="@android:drawable/ic_menu_preferences"
             android:label="@string/title_activity_settings">
             <intent-filter>
                 <action android:name="android.speech.tts.engine.CONFIGURE_ENGINE" />

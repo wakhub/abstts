@@ -17,25 +17,21 @@
 
     <header
         android:fragment="com.github.wakhub.abstts.activity.SettingsActivity$GeneralSettingsFragment"
-        android:icon="@android:drawable/ic_lock_silent_mode_off"
         android:summary="Language detection"
         android:title="General" />
 
     <header
         android:fragment="com.github.wakhub.abstts.activity.SettingsActivity$LanguageSettingsFragment"
-        android:icon="@android:drawable/ic_menu_sort_alphabetically"
         android:summary="Settings for each languages"
         android:title="Language Settings" />
 
     <header
-        android:icon="@android:drawable/ic_menu_more"
         android:summary="Open Text-to-speech options in Android Settings"
         android:title="Text-to-speech options">
         <intent android:action="com.android.settings.TTS_SETTINGS" />
     </header>
 
     <header
-        android:icon="@android:drawable/sym_def_app_icon"
         android:summary="Abstract Text-to-speech app"
         android:title="Open App">
         <intent
